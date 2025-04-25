@@ -1,0 +1,71 @@
+/* Base styles */
+.route-page-body {
+  padding: 20px;
+  min-height: calc(100vh - 120px); /* Adjust based on your header/footer height */
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.row {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+/* Movie grid adjustments */
+ul.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .route-page-body {
+    padding: 15px;
+  }
+
+  ul.row {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  ul.row {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 18px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  ul.row {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  ul.row {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+/* Loading animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.react-loader-spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Pagination wrapper */
+.pagination-wrapper {
+  padding: 20px 0;
+  background-color: #f8f9fa;
+}

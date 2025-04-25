@@ -1,0 +1,82 @@
+.movie-card-container {
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  aspect-ratio: 2/3; /* Standard movie poster aspect ratio */
+}
+
+.movie-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.movie-rating {
+  font-size: 14px;
+  color: #666;
+}
+
+.btn-outline-success {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .movie-card-container {
+    flex-direction: row !important;
+    align-items: center;
+    gap: 15px;
+  padding: 10px;
+  }
+  
+  .movie-card-image {
+    width: 80px;
+    height: 120px;
+  }
+  
+  .movie-title {
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .movie-rating {
+    font-size: 12px;
+  }
+  
+  .btn-outline-success {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .movie-title {
+    font-size: 14px;
+  }
+  
+  .movie-rating {
+    font-size: 12px;
+  }
+}

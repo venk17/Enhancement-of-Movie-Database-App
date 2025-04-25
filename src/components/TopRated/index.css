@@ -1,0 +1,111 @@
+/* Base Styles */
+.route-page-body {
+  padding: 2rem;
+  min-height: calc(100vh - 180px);
+  background-color: #f8f9fa;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+/* Movie Grid Layout */
+ul.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Header Styling */
+.movie-list-header {
+  color: #032541;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #03b3e3;
+  padding-bottom: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .route-page-body {
+    padding: 1rem;
+  }
+
+  ul.row {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+
+  .movie-list-header {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .route-page-body {
+    padding: 1.5rem;
+  }
+
+  ul.row {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  ul.row {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  ul.row {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* Loading Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.react-loader-spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Pagination Wrapper */
+.pagination-wrapper {
+  padding: 1.5rem 0;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* No Results State */
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+.no-results h3 {
+  color: #032541;
+  margin-bottom: 1rem;
+}
+
+/* Card Hover Effects */
+ul.row li {
+  transition: transform 0.3s ease;
+}
+
+ul.row li:hover {
+  transform: translateY(-5px);
+}

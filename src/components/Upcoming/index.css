@@ -34,8 +34,12 @@ ul.row {
 
 /* Loading Animation */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .react-loader-spinner {
@@ -47,12 +51,12 @@ ul.row {
   .route-page-body {
     padding: 1rem;
   }
-  
+
   ul.row {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 1rem;
   }
-  
+
   .page-header {
     font-size: 1.5rem;
     margin-bottom: 1.25rem;
@@ -69,7 +73,7 @@ ul.row {
   .route-page-body {
     padding: 1.5rem;
   }
-  
+
   ul.row {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
@@ -108,7 +112,7 @@ ul.row li {
 
 ul.row li:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Pagination Container */

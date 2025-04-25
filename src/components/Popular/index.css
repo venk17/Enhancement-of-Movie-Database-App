@@ -1,7 +1,9 @@
 /* Base styles */
 .route-page-body {
   padding: 20px;
-  min-height: calc(100vh - 120px); /* Adjust based on your header/footer height */
+  min-height: calc(
+    100vh - 120px
+  ); /* Adjust based on your header/footer height */
 }
 
 .loader-container {
@@ -56,8 +58,12 @@ ul.row {
 
 /* Loading animation */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .react-loader-spinner {
